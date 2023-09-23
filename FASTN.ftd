@@ -9,10 +9,12 @@ favicon: /-/a-b-h-i-2022.github.io/share-wheels-landing/favicon.ico
 -- fastn.dependency: shaheen-senpai.github.io/fastn-cs-tail
 -- fastn.dependency: sarvom.github.io/holy-angel-typography
 -- fastn.dependency: fastnui.trizwit.com
+-- fastn.dependency: sarvom.github.io/poppins
 
 
 
 -- fastn.auto-import: a-b-h-i-2022.github.io/share-wheels-landing/FASTN/ds
 -- fastn.auto-import: a-b-h-i-2022.github.io/share-wheels-landing/assets
+-- fastn.auto-import: a-b-h-i-2022.github.io/share-wheels-landing/components
 -- fastn.auto-import: doc-site
 

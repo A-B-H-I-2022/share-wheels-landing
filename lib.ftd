@@ -1,5 +1,6 @@
 -- import: sarvom.github.io/holy-angel-typography 
 -- import: shaheen-senpai.github.io/fastn-cs-tail
+-- import: sarvom.github.io/poppins/assets as poppins-assets
 
 
 -- component page:
@@ -278,6 +279,7 @@ border-radius.px: 20
 margin-vertical.px: 10
 
 -- ftd.text: $header-desktop.logo-text
+role: $poppins-size-30-600
 margin-horizontal.px: 10
 text-align: center
 align-self: center
@@ -289,7 +291,7 @@ height: fill-container
 align-content: right
 
 -- ftd.text: $header-desktop.cta-text-1
-role: $inherited.types.label-large
+role: $poppins-size-30-600
 text-align: center
 margin-vertical.px: 28
 margin-horizontal.px: 32
@@ -439,3 +441,16 @@ link: https://trizwit.com/
 
 
 
+-- ftd.type poppins-size-30-600-desktop:
+size.px: 30
+weight: 600
+font-family: $poppins-assets.fonts.Poppins
+
+-- ftd.type poppins-size-30-600-mobile:
+size.px: 20
+weight: 600
+font-family: $poppins-assets.fonts.Poppins
+
+-- ftd.responsive-type poppins-size-30-600:
+desktop: $poppins-size-30-600-desktop
+mobile: $poppins-size-30-600-mobile

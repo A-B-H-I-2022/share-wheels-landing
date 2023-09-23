@@ -1,28 +1,50 @@
--- import: fastnui.trizwit.com/UI-Components/Header/header-5 as navbar
--- import: fastnui.trizwit.com/UI-Components/Hero/hero-1 
 -- import: a-b-h-i-2022.github.io/share-wheels-landing/lib
 
--- lib.page:
+-- page:
 
--- lib.header:
-logo: $assets.files.assets.logo.jpg
-logo-text: Portfolio
+
+
+-- component page:
+
+
+-- ftd.column:
+width: fill-container
+height: 
+types: 
+colors: 
+background.solid: 
+
+-- ftd.column:
+width: fill-container
+height: 
+
+-- components.navbar:
+logo: $assets.files.assets.Logo.png
 cta-text-1: Home
 cta-text-2: About
-cta-text-3: Resume
-cta-text-1-url: index.html
-cta-text-2-url: index.html
-cta-text-3-url: index.html
 
--- hero-1.hero-1: I'm John Doe
-cta-button-1: Resume
-link-1: https://www.resume.com/
-cta-button-2: Schedule Meeting
-link-2: https://calendly.com/
-cover: $assets.files.assets.ape-1.jpg
+-- ftd.column: 
+width: fill-container
+padding-left.px: 106
+padding-top.px: 90
 
-Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant cold-pressed tacos poke beard tote bag. 
-Heirloom echo park mlkshk tote bag selvage hot chicken authentic tumeric truffaut hexagon try-hard chambray.
+-- components.hero:
+logo: $assets.files.assets.Logo.png
 
 
--- end: lib.page
+-- components.gallery:
+
+
+-- end: ftd.column
+
+
+-- components.info-page:
+
+
+
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: page
