@@ -11,10 +11,11 @@ string cta-text-2:
 width: fill-container
 background.solid: #FFF
 sticky: true
+z-index: 99999999999
 
 -- ftd.row:
 width: fill-container
-height: hug-content
+height.fixed.px: 75
 border-bottom-width.px: 1
 border-color: #cccccc
 spacing.fixed.px: 50
@@ -24,33 +25,58 @@ spacing.fixed.px: 50
 -- ftd.image:
 src: $navbar.logo
 width.fixed.px: 100
-margin.px: 25
+margin.px: 10
+margin-left.px: 25
 
 
--- ftd.text: $navbar.cta-text-1
-role: $poppins-size-48-400
-color:
-align-self: center
-padding.px: 10
-padding-horizontal.px: 20
+
+;; -- ftd.iframe:
+;; src: <<iframe src="https://giphy.com/embed/NyqVPr8AYfpSEF8oMu" width="48" height="36" frameBorder="0" class="giphy-embed"></iframe><p><a href="https://giphy.com/gifs/NyqVPr8AYfpSEF8oMu">via GIPHY</a></p>>
+
+
+
+
+
+
+-- ftd.row:
+width: hug-content
+height.fixed.percent: 80
+border-radius.px: 20
 background.solid: #FFF
+align-content: center
+align-self: center
+padding-horizontal.px: 20
 background.solid if {navbar.hover-home}: #4dff88
 $on-mouse-enter$: $ftd.set-bool($a = $navbar.hover-home, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $navbar.hover-home, v = false)
-link:
+link: index.html
 
 
--- ftd.text: $navbar.cta-text-2
-role: $poppins-size-48-400
-color:
-align-self: center 
-padding.px: 10
+-- ftd.text: $navbar.cta-text-1
+role: $poppins-size-20-400
+color: #000
+
+
+-- end: ftd.row
+
+-- ftd.row:
+width: hug-content
+height.fixed.percent: 80
+border-radius.px: 20
+align-content: center
+align-self: center
 padding-horizontal.px: 20
 background.solid: #FFF
 background.solid if {navbar.hover-about}: #4dff88
 $on-mouse-enter$: $ftd.set-bool($a = $navbar.hover-about, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $navbar.hover-about, v = false)
-link:
+link: index.html#about_us
+
+-- ftd.text: $navbar.cta-text-2
+role: $poppins-size-20-400
+color: #000
+
+-- end: ftd.row
 
 
 -- end: ftd.row
@@ -75,20 +101,24 @@ y-offset.px: 3
 
 -- component hero:
 ftd.image-src logo:
-
+boolean $hover-download: false
 
 -- ftd.row:
-width: hug-content
+width: fill-container
 height: hug-content
+padding-bottom.px: 400
 spacing.fixed.px: 40
+id: gif
 
 
 
 -- ftd.row:
 shadow: $s
+margin-top.px: 100
 border-width.px: 2
 border-radius.px: 56
 border-color: #cccccc
+background.solid: #FFF
 
 -- ftd.image:
 src: $hero.logo
@@ -106,6 +136,7 @@ height: fill-container
 align-content: left
 padding-left.px: 30
 spacing.fixed.px: 15
+padding-bottom.px: 80
 
 -- ftd.text: Share Wheels
 role: $poppins-size-64-600
@@ -118,17 +149,26 @@ color: #009933
 -- ftd.text: Download
 role: $poppins-size-20-400
 color: #FFF
+color if {hero.hover-download}: #000
 margin-top.px: 15
 padding-horizontal.px: 40
 padding-vertical.px: 10
 background.solid: #009933
+background.solid if {hero.hover-download}: #FFF
+$on-mouse-enter$: $ftd.set-bool($a = $hero.hover-download, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $hero.hover-download, v = false)
 border-radius.px: 10
 link: 
 
 
-
-
 -- end: ftd.column
+
+
+-- ftd.image:
+margin-top.px: 100
+src: $assets.files.assets.image-crop.gif
+width.fixed.percent: 145
+align-self: end
 
 
 -- end: ftd.row
@@ -145,23 +185,25 @@ link:
 -- component gallery:
 
 -- ftd.row:
-width: fill-container
-spacing.fixed.px: 25
-align-content: center
-padding-vertical.px: 100
+width:
+spacing.fixed.px: 45
+padding-right.px: 5
+padding-top.px: 390
+anchor.id: gif
 
 
--- card:
-img: $assets.files.assets.SignUP.png
-
--- card:
-img: $assets.files.assets.SignUP.png
 
 -- card:
 img: $assets.files.assets.SignUP.png
 
 -- card:
-img: $assets.files.assets.SignUP.png
+img: $assets.files.assets.Ride.png
+
+-- card:
+img: $assets.files.assets.Ride-1.png
+
+-- card:
+img: $assets.files.assets.Ride-2.png
 
 
 -- end: ftd.row
@@ -181,6 +223,7 @@ ftd.image-src img:
 
 -- ftd.column:
 shadow: $s
+background.solid: #FFF
 width.fixed.percent: 20
 padding-left.px: 20
 padding-right.px: 20
@@ -217,44 +260,111 @@ border-top-right-radius.px: 15
 -- ftd.column:
 width: fill-container
 height: hug-content
-align-content: center
+align-content: left
 spacing.fixed.px: 5
+padding-top.px: 50
 padding-vertical.px: 30
+padding-left.px: 100
+id: about_us
 
--- ftd.text: About this app
+-- ftd.text: About the App:
 color: #000000
 role: $poppins-size-48-400
 
 -- ftd.text: ShareWheels - Carpool Simplified
-color: #c7C7C7
-role: $poppins-size-48-400
+color: #008000
+role: $poppins-size-20-400
 
 -- ftd.text: Carpooling made easy! ShareWheels connects employees,
-color: #c7C7C7
-role: $poppins-size-48-400
+color: #008000
+role: $poppins-size-20-400
 
 -- ftd.text: so you can share rides, reduce commuting costs, and help 
-color: #c7C7C7
-role: $poppins-size-48-400
+color: #008000
+role: $poppins-size-20-400
 
 -- ftd.text: the environment. Find rides or offer to drive effortlessly. 
-color: #c7C7C7
-role: $poppins-size-48-400
+color: #008000
+role: $poppins-size-20-400
 
 -- ftd.text: Download now and make your daily commute smarter.
-color: #c7C7C7
-role: $poppins-size-48-400
+color: #008000
+role: $poppins-size-20-400
 
 -- ftd.text: Key Features:
 color: #000000
 role: $poppins-size-48-400
+align-self: end
+padding-right.px: 450
 
 
+-- ftd.column:
+align-self: end
+padding-right.px: 140
+
+-- ftd.text: ● Easy Route Matching
+color: #008000
+role: $poppins-size-20-400
+
+-- ftd.text: ● Instant Ride Requests
+color: #008000
+role: $poppins-size-20-400
+
+
+-- ftd.text: ● Eco-Friendly Commuting
+color: #008000
+role: $poppins-size-20-400
+
+
+-- ftd.text: ● Find Rides or Offer Drives
+color: #008000
+role: $poppins-size-20-400
+
+
+-- ftd.text: ● Join ShareWheels and change the way you commute today!
+color: #008000
+role: $poppins-size-20-400
+
+-- end: ftd.column
 
 
 -- end: ftd.column
 
 -- end: info-page
+
+
+
+
+
+
+
+
+-- component footer:
+
+-- ftd.column:
+width: fill-container
+background.solid: #2a2a34
+align-content: center
+padding.px: 40 
+
+-- ftd.image:
+src: $assets.files.assets.logoW.png
+
+-- ftd.text: Designed and built by team HackTrials.
+color: #FFF
+padding-top.px: 20
+padding-bottom.px: 40
+
+
+-- end: ftd.column
+
+-- end: footer
+
+
+
+
+
+
 
 
 
@@ -282,6 +392,7 @@ mobile: $poppins-size-48-mobile
 
 
 
+
 -- ftd.type poppins-size-20-desktop:
 size.px: 20
 weight: 500
@@ -299,6 +410,16 @@ mobile: $poppins-size-20-mobile
 
 
 
+
+
+
+
+
+
+
+
+
+
 -- ftd.type poppins-size-64-desktop:
 size.px: 60
 weight: 600
@@ -313,3 +434,27 @@ font-family: $poppins-assets.fonts.Poppins
 -- ftd.responsive-type poppins-size-64-600:
 desktop: $poppins-size-64-desktop
 mobile: $poppins-size-64-mobile
+
+
+
+
+
+
+
+
+-- ftd.linear-gradient lg: 
+direction: bottom
+colors: $color-values 
+
+
+
+-- ftd.linear-gradient-color list color-values:
+
+-- ftd.linear-gradient-color: #00c380
+end.percent: 50.0
+
+-- ftd.linear-gradient-color: #FFF123
+start.percent: 50.0
+
+
+-- end: color-values

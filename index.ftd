@@ -18,6 +18,7 @@ background.solid:
 width: fill-container
 height: 
 
+
 -- components.navbar:
 logo: $assets.files.assets.Logo.png
 cta-text-1: Home
@@ -26,7 +27,8 @@ cta-text-2: About
 -- ftd.column: 
 width: fill-container
 padding-left.px: 106
-padding-top.px: 90
+padding-top.px: 10
+background.linear-gradient: $lg 
 
 -- components.hero:
 logo: $assets.files.assets.Logo.png
@@ -41,6 +43,7 @@ logo: $assets.files.assets.Logo.png
 -- components.info-page:
 
 
+-- components.footer: 
 
 
 -- end: ftd.column
@@ -48,3 +51,19 @@ logo: $assets.files.assets.Logo.png
 -- end: ftd.column
 
 -- end: page
+
+
+-- ftd.linear-gradient lg: 
+direction: top
+colors: $color-values-1
+
+
+-- ftd.linear-gradient-color list color-values-1:
+
+-- ftd.linear-gradient-color: white
+end.percent: 45.0
+
+-- ftd.linear-gradient-color: #00c380 
+start.percent: 45.0
+
+-- end: color-values-1
