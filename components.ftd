@@ -1,0 +1,315 @@
+-- import: sarvom.github.io/poppins/assets as poppins-assets
+
+-- component navbar:
+boolean $hover-home: false
+boolean $hover-about: false
+ftd.image-src logo:
+string cta-text-1:
+string cta-text-2:
+
+-- ftd.row:
+width: fill-container
+background.solid: #FFF
+sticky: true
+
+-- ftd.row:
+width: fill-container
+height: hug-content
+border-bottom-width.px: 1
+border-color: #cccccc
+spacing.fixed.px: 50
+
+
+
+-- ftd.image:
+src: $navbar.logo
+width.fixed.px: 100
+margin.px: 25
+
+
+-- ftd.text: $navbar.cta-text-1
+role: $poppins-size-48-400
+color:
+align-self: center
+padding.px: 10
+padding-horizontal.px: 20
+background.solid: #FFF
+background.solid if {navbar.hover-home}: #4dff88
+$on-mouse-enter$: $ftd.set-bool($a = $navbar.hover-home, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $navbar.hover-home, v = false)
+link:
+
+
+-- ftd.text: $navbar.cta-text-2
+role: $poppins-size-48-400
+color:
+align-self: center 
+padding.px: 10
+padding-horizontal.px: 20
+background.solid: #FFF
+background.solid if {navbar.hover-about}: #4dff88
+$on-mouse-enter$: $ftd.set-bool($a = $navbar.hover-about, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $navbar.hover-about, v = false)
+link:
+
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- end: navbar
+
+
+
+
+
+
+-- ftd.shadow s:
+color: #c8c6c6
+blur.px: 4
+x-offset.px: 0
+y-offset.px: 3
+
+
+
+
+-- component hero:
+ftd.image-src logo:
+
+
+-- ftd.row:
+width: hug-content
+height: hug-content
+spacing.fixed.px: 40
+
+
+
+-- ftd.row:
+shadow: $s
+border-width.px: 2
+border-radius.px: 56
+border-color: #cccccc
+
+-- ftd.image:
+src: $hero.logo
+width.fixed.px: 230
+padding-horizontal.px: 30
+padding-top.px: 54
+padding-bottom.px: 70
+
+-- end: ftd.row
+
+
+-- ftd.column:
+width: fill-container
+height: fill-container
+align-content: left
+padding-left.px: 30
+spacing.fixed.px: 15
+
+-- ftd.text: Share Wheels
+role: $poppins-size-64-600
+
+
+-- ftd.text: **HackTrials**
+role: $poppins-size-20-400
+color: #009933
+
+-- ftd.text: Download
+role: $poppins-size-20-400
+color: #FFF
+margin-top.px: 15
+padding-horizontal.px: 40
+padding-vertical.px: 10
+background.solid: #009933
+border-radius.px: 10
+link: 
+
+
+
+
+-- end: ftd.column
+
+
+-- end: ftd.row
+
+-- end: hero
+
+
+
+
+
+
+
+
+-- component gallery:
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 25
+align-content: center
+padding-vertical.px: 100
+
+
+-- card:
+img: $assets.files.assets.SignUP.png
+
+-- card:
+img: $assets.files.assets.SignUP.png
+
+-- card:
+img: $assets.files.assets.SignUP.png
+
+-- card:
+img: $assets.files.assets.SignUP.png
+
+
+-- end: ftd.row
+
+-- end: gallery
+
+
+
+
+
+
+
+
+
+-- component card:
+ftd.image-src img: 
+
+-- ftd.column:
+shadow: $s
+width.fixed.percent: 20
+padding-left.px: 20
+padding-right.px: 20
+padding-top.px: 25
+border-width.px: 1
+border-color: #c7C7C7
+border-top-left-radius.px: 25
+border-top-right-radius.px: 25
+border-bottom-left-radius.px: 25
+border-bottom-right-radius.px: 25
+
+
+
+-- ftd.image: 
+src: $card.img
+width: fill-container
+border-top-left-radius.px: 15
+border-top-right-radius.px: 15
+
+-- end: ftd.column
+
+-- end: card
+
+
+
+
+
+
+
+
+-- component info-page:
+
+
+-- ftd.column:
+width: fill-container
+height: hug-content
+align-content: center
+spacing.fixed.px: 5
+padding-vertical.px: 30
+
+-- ftd.text: About this app
+color: #000000
+role: $poppins-size-48-400
+
+-- ftd.text: ShareWheels - Carpool Simplified
+color: #c7C7C7
+role: $poppins-size-48-400
+
+-- ftd.text: Carpooling made easy! ShareWheels connects employees,
+color: #c7C7C7
+role: $poppins-size-48-400
+
+-- ftd.text: so you can share rides, reduce commuting costs, and help 
+color: #c7C7C7
+role: $poppins-size-48-400
+
+-- ftd.text: the environment. Find rides or offer to drive effortlessly. 
+color: #c7C7C7
+role: $poppins-size-48-400
+
+-- ftd.text: Download now and make your daily commute smarter.
+color: #c7C7C7
+role: $poppins-size-48-400
+
+-- ftd.text: Key Features:
+color: #000000
+role: $poppins-size-48-400
+
+
+
+
+-- end: ftd.column
+
+-- end: info-page
+
+
+
+
+
+
+
+
+-- ftd.type poppins-size-48-desktop:
+size.px: 30
+weight: 500
+font-family: $poppins-assets.fonts.Poppins
+
+
+-- ftd.type poppins-size-48-mobile:
+size.px: 30
+weight: 500
+font-family: $poppins-assets.fonts.Poppins
+
+-- ftd.responsive-type poppins-size-48-400:
+desktop: $poppins-size-48-desktop
+mobile: $poppins-size-48-mobile
+
+
+
+
+
+-- ftd.type poppins-size-20-desktop:
+size.px: 20
+weight: 500
+font-family: $poppins-assets.fonts.Poppins
+
+
+-- ftd.type poppins-size-20-mobile:
+size.px: 20
+weight: 500
+font-family: $poppins-assets.fonts.Poppins
+
+-- ftd.responsive-type poppins-size-20-400:
+desktop: $poppins-size-20-desktop
+mobile: $poppins-size-20-mobile
+
+
+
+-- ftd.type poppins-size-64-desktop:
+size.px: 60
+weight: 600
+font-family: $poppins-assets.fonts.Poppins
+
+
+-- ftd.type poppins-size-64-mobile:
+size.px: 60
+weight: 600
+font-family: $poppins-assets.fonts.Poppins
+
+-- ftd.responsive-type poppins-size-64-600:
+desktop: $poppins-size-64-desktop
+mobile: $poppins-size-64-mobile
