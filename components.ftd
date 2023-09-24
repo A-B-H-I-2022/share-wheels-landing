@@ -30,12 +30,6 @@ margin-left.px: 25
 
 
 
-;; -- ftd.iframe:
-;; src: <<iframe src="https://giphy.com/embed/NyqVPr8AYfpSEF8oMu" width="48" height="36" frameBorder="0" class="giphy-embed"></iframe><p><a href="https://giphy.com/gifs/NyqVPr8AYfpSEF8oMu">via GIPHY</a></p>>
-
-
-
-
 
 
 -- ftd.row:
@@ -158,7 +152,7 @@ background.solid if {hero.hover-download}: #FFF
 $on-mouse-enter$: $ftd.set-bool($a = $hero.hover-download, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $hero.hover-download, v = false)
 border-radius.px: 10
-link: 
+link: https://youtu.be/o-YBDTqX_ZU?si=qJs5ph3Wb3Wbt66P
 
 
 -- end: ftd.column
@@ -188,7 +182,7 @@ align-self: end
 width:
 spacing.fixed.px: 45
 padding-right.px: 5
-padding-top.px: 390
+margin-top.px: 390
 anchor.id: gif
 
 
@@ -271,7 +265,7 @@ id: about_us
 color: #000000
 role: $poppins-size-48-400
 
--- ftd.text: ShareWheels - Carpool Simplified
+-- ftd.text: ShareWheels - Carpool Simplified.
 color: #008000
 role: $poppins-size-20-400
 
@@ -290,6 +284,58 @@ role: $poppins-size-20-400
 -- ftd.text: Download now and make your daily commute smarter.
 color: #008000
 role: $poppins-size-20-400
+
+
+
+;;-- component pictures:
+
+
+;;-- ftd.row:
+
+;;width:
+;; spacing.fixed.px: 5
+;; padding-right.px: 5
+;; margin-top.px: 10
+
+;; -- cards:
+;; img: $assets.files.assets.Drive.png
+
+;; -- cards:
+;; img: $assets.files.assets.office.png
+
+;; -- cards:
+;; img: $assets.files.assets.community.png
+
+
+;; -- end: ftd.row
+
+;; -- end: pictures
+
+
+;; -- component cards:
+;; ftd.image-src img:
+
+;; -- ftd.column:
+;; shadow: $s
+;; width.fixed.percent: 20
+;; padding-left.px: 5
+;; padding-right.px: 5
+;; padding-top.px: 5
+;; border-color: #c7C7C7
+;; border-top-left-radius.px: 25
+;; border-top-right-radius.px: 25
+;; border-bottom-left-radius.px: 25
+;; border-bottom-right-radius.px: 25
+
+
+
+;; -- end: ftd.column
+
+;; -- end: cards
+
+
+
+
 
 -- ftd.text: Key Features:
 color: #000000
