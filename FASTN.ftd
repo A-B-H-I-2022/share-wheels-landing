@@ -18,3 +18,6 @@ favicon: /-/a-b-h-i-2022.github.io/share-wheels-landing/favicon.ico
 -- fastn.auto-import: a-b-h-i-2022.github.io/share-wheels-landing/components
 -- fastn.auto-import: doc-site
 
+-- fastn.sitemap:
+
+# Home: index.html
