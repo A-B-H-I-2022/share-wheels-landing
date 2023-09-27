@@ -152,7 +152,7 @@ background.solid if {hero.hover-download}: #FFF
 $on-mouse-enter$: $ftd.set-bool($a = $hero.hover-download, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $hero.hover-download, v = false)
 border-radius.px: 10
-link: https://youtu.be/o-YBDTqX_ZU?si=qJs5ph3Wb3Wbt66P
+link: https://github.com/A-B-H-I-2022/share-wheels-landing
 
 
 -- end: ftd.column
